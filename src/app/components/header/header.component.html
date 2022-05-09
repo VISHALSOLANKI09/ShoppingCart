@@ -1,0 +1,15 @@
+<header>
+    <div class="navbar bg-success shadow-sm">
+        <div class="navbar-brand align-items-center d-flex">
+            <i style="font-size: 40px;" class="fas fa-shipping-fast">&nbsp;</i>
+            <strong routerLink = "/" style="font-size: 30px; cursor: pointer;">Vishcart</strong>
+            <div class="form-group">
+                <input type="text" placeholder="   Search Product"   [(ngModel)] = "searchKeyword" (keyup)="search($event)" class="form-search">
+            </div>
+        </div>
+        <button routerLink="/cart" class="btn btn-success">
+            <i style="font-size: 30px;" class="fas fa-cart-plus"></i>
+            <div style="font-size: 14px;" class="badge bg-warning">{{ totalItem }}</div>
+        </button>
+    </div>
+</header>
